@@ -1,0 +1,43 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "https://blogapp-m6b4.onrender.com/",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^38.0.1",
+    "@ckeditor/ckeditor5-react": "^6.0.0",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.13.0",
+    "@tiptap/extension-image": "^2.0.3",
+    "@tiptap/pm": "^2.0.3",
+    "@tiptap/react": "^2.0.3",
+    "@tiptap/starter-kit": "^2.0.3",
+    "aos": "^2.3.4",
+    "axios": "^1.4.0",
+    "eslint": "8.40.0",
+    "eslint-config-next": "13.4.2",
+    "html-react-parser": "^4.0.0",
+    "html-to-text": "^9.0.5",
+    "htmlparser2": "^9.0.0",
+    "macy": "^2.5.1",
+    "next": "13.4.2",
+    "node-fetch": "^3.3.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-masonry-css": "^1.0.16",
+    "react-quill": "^2.0.0",
+    "react-responsive-masonry": "^2.1.7",
+    "suneditor-react": "^3.5.0"
+  }
+}

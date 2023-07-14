@@ -1,0 +1,86 @@
+.footer{
+  background-color: rgb(29, 28, 28);
+  padding:20px;
+  min-height: 350px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.h1{
+  cursor: pointer;
+  color: green;
+  font-size: 20px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+
+.secondPart{
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.ul{
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: grey;
+  font-size: 15px;
+}
+.li{
+  cursor: pointer;
+  margin-left: -30px!important;
+  margin: 10px ;
+  text-align: center;
+
+}
+.thirdPart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: grey;
+}
+.contact{
+  text-align: center;
+  margin: 10px 0;
+  font-size: 18px;
+}
+.aboutBlog{
+  color:gray;
+  font-size: 18px;
+  line-height: 1.7;
+  text-align: center;
+}
+.firstPart{
+  font-size: 20px;
+}
+@media only screen and (min-width: 900px){
+  .footer{
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px;
+  }
+  .firstPart{
+    width:800px;
+    font-size: 28px;
+  }
+  .h1,.aboutBlog{
+    text-align: justify;
+    line-height: 1.2;
+    font-size: 20px;
+  }
+  .contact{
+    text-align: end;
+    font-size: 18px;
+  }
+  .thirdPart{
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}

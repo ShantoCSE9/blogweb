@@ -1,0 +1,71 @@
+
+.heading{
+    text-align: center;
+    font-size: 11px;
+    color:rgb(27, 136, 5);
+    margin: 20px 0;
+}
+
+.title{
+    width:100%;
+    padding: 0px  40px;
+    display:flex;
+    flex-direction: column;
+    margin:10px 0;
+    font-size: 8px;
+    color: rgb(109, 109, 109);
+
+}
+
+.input{
+    height: 30px;
+    margin-top: 5px;
+    
+}
+.textEditor{
+   
+  
+    overflow: hidden;
+    width:100%;
+    padding: 0px  40px;
+    margin-top: 30px;
+    min-height: 30vh;
+  
+}
+
+.bsubmit{
+   text-align: center;
+   margin: 20px;
+}
+@media only screen and (min-width: 700px){
+  
+    .title{
+        width:50%;
+    }
+    .textEditor{
+   
+        width: 100%;    
+    }
+    .submit{
+        margin: 20px 15%;
+    }
+    
+  }
+  @media only screen and (min-width: 1200px){
+ 
+    .title{
+        width:30%;
+        margin-left: 15%;
+    }
+    .textEditor{
+        width:60%;
+        margin-left: 15%;
+    }
+  
+        .bsubmit{
+            text-align: left;
+            margin-right: 15%;
+         }
+
+    
+  }
