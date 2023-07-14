@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://blogapp-m6b4.onrender.com/",
+  "proxy": "https://blogweb-uxhj.onrender.com/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

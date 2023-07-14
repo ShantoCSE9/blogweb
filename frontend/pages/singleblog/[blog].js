@@ -1,10 +1,10 @@
 import Navbar from '@/components/Navbar';
 import { CircularProgress } from '@mui/material';
 import axios from 'axios';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import style from '../../styles/blog.module.css';
-import Image from 'next/image';
 const Blog = () => {
     const router = useRouter();
     const [state,set]=useState('')
@@ -15,7 +15,7 @@ const Blog = () => {
     let l= localStorage.getItem('info')
     set2(l);
     const getblog=async()=>{
-        const {data}=  await axios.get(`http://localhost:5000/single-blog/${id}`)
+        const {data}=  await axios.get(`https://blogweb-uxhj.onrender.com/single-blog/${id}`)
         set(data.singleBlog)
         setTimeout(() => {
           set3(true)
