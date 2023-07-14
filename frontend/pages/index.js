@@ -12,7 +12,7 @@ export default function Home() {
   const [state2,set2]=useState(false)
 
       const fetchdata=async()=>{
-        await axios.get('http://localhost:5000/',{
+        await axios.get('https://blogweb-uxhj.onrender.com',{
           params:{
             page:activePage,
             size:limit
