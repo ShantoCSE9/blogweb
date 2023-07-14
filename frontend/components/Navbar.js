@@ -40,7 +40,7 @@ const query=router.query;
                  <div className={styles.heading}>
                   <div style={{ }}>
 
-                  <Image  src={'/banglaBlog.jpg' } alt='' width={30} height={30} style={{width:'30px',height:'30px',objectFit:'cover',borderRadius:'50%'}}/>
+                  <Image  src={'/BanglaBlog.jpg' } alt='' width={30} height={30} style={{width:'30px',height:'30px',objectFit:'cover',borderRadius:'50%'}}/>
                     
                     </div>
                    <h1 style={{
