@@ -53,7 +53,7 @@ const convertBase64=(file)=>{
 
   useEffect(()=>{
     const getblog=async()=>{
-      const {data}=  await axios.get(`http://localhost:5000/update-blog/${blogId}`)
+      const {data}=  await axios.get(`https://blogweb-uxhj.onrender.com/update-blog/${blogId}`)
       set3(data.blog) 
 
         set(data.blog[0].blog)
