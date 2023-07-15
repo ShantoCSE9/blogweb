@@ -83,7 +83,7 @@ const convertBase64=(file)=>{
     }
        try {
              
-              const data=await axios.put(`http://localhost:5000/Update-Blog/${blogId}`, {
+              const data=await axios.put(`https://blogweb-uxhj.onrender.com/Update-Blog/${blogId}`, {
               title:state2.title,
               category:state2.category,
               coverImg:selectedFile,

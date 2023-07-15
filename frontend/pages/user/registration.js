@@ -54,7 +54,7 @@ setTimeout(() => {
 e.preventDefault();
   try {
 
-      const {data} = await axios.post('http://localhost:5000/register', {
+      const {data} = await axios.post('https://blogweb-uxhj.onrender.com/register', {
       username: inputs.username,
       email: inputs.email,
       password: inputs.password,

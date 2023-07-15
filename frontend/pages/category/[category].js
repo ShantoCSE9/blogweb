@@ -16,7 +16,7 @@ const Category = () => {
     const [state2,set2]=useState(false)
            const fetchdata=async()=>{ 
     
-            await axios.get(`http://localhost:5000/category/${category}`,{
+            await axios.get(`https://blogweb-uxhj.onrender.com/category/${category}`,{
             params:{
             page:activePage,
             size:limit

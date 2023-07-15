@@ -26,7 +26,7 @@ const value=useUserContext();
  const formdata=async (e)=>{
       e.preventDefault();
               try {
-                  const {data} = await axios.post('http://localhost:5000/login', {
+                  const {data} = await axios.post('https://blogweb-uxhj.onrender.com/login', {
                   email: inputs.email,
                   password: inputs.password
                 })

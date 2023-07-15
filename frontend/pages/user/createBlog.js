@@ -68,7 +68,7 @@ const convertBase64=(file)=>{
     }
        try {
       
-              const data2=await axios.post('http://localhost:5000/create-blog', {
+              const data2=await axios.post('https://blogweb-uxhj.onrender.com/create-blog', {
               title:state2.title,
               category:state2.category,
               coverImg:selectedFile,
@@ -76,7 +76,7 @@ const convertBase64=(file)=>{
               user: info
             })
        
-            const data3=await axios.post('http://localhost:5000/draft-blog', {
+            const data3=await axios.post('https://blogweb-uxhj.onrender.com/draft-blog', {
               title:state2.title,
               category:state2.category,
               coverImg:selectedFile,
