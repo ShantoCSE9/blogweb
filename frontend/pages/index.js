@@ -21,9 +21,9 @@ export default function Home() {
            set([...state,...data.blog ])
           
            setValue(data.total)
-           setTimeout(() => {
+          
             set2(true)
-           }, 1000);
+         
            setPage(activePage+1)
         }).catch((error)=>{
           console.log(error)

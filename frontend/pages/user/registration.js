@@ -1,8 +1,8 @@
 import Navbar from '@/components/Navbar';
 import { Alert, Button, CircularProgress, TextField, Typography } from '@mui/material';
 import axios from 'axios';
-import Router from "next/router";
 import { useRouter } from 'next/navigation';
+import Router from "next/router";
 import { useState } from 'react';
 import style from '../../styles/registration.module.css';
 const Register = () => {
@@ -44,7 +44,7 @@ const convertBase64=(file)=>{
 }
 setTimeout(() => {
   set(true)
- }, 3500);
+ }, 1500);
 
  const handelChange=(e)=>{
   

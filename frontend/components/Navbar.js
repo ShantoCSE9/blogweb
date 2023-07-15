@@ -50,10 +50,7 @@ const query=router.query;
                      fontSize:'25px',
               
                       }} onClick={()=>{
-                        router.push('/')
-                        setTimeout(() => {
-                          router.reload()
-                         }, 2000);
+                        router.push('/')                  
                       }
                       
                      

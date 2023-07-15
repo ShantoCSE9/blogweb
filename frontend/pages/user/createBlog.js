@@ -25,7 +25,7 @@ export default function CreateBlog() {
   })
   setTimeout(() => {
     set3(true)
-   }, 3500);
+   }, 1500);
 
   let b=""
   b+=state;

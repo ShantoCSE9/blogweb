@@ -16,7 +16,7 @@ const Login = () => {
  }) 
  setTimeout(() => {
   set(true)
- }, 3500);
+ }, 1500);
  const handelChange=(e)=>{
   setvalue({
     ...inputs,

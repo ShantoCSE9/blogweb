@@ -64,7 +64,7 @@ const convertBase64=(file)=>{
         }) 
         setTimeout(() => {
           set4(true)
-         }, 2000);
+         }, 1000);
    
   }
   if(blogId) getblog()

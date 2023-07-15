@@ -32,9 +32,9 @@ const UserProfile = () => {
        set([...state,...data.blog ])
        setValue(data.total)
        setPage(activePage+1)
-       setTimeout(() => {
+      
         set3(true)
-       }, 3500);
+     
     }).catch((error)=>{
       console.log(error)
     })
@@ -51,9 +51,7 @@ const UserProfile = () => {
        set([...state,...data.blog ])
        setValue(data.total)
        setPage(activePage+1)  
-       setTimeout(() => {
         set3(true)
-       }, 2000);
 
       }).catch((error)=>{
       console.log(error)
