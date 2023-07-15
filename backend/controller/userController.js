@@ -11,9 +11,10 @@ try {
             message:"please fill all the fields"
         })
        }
-     
+  
        const existingEmail= await userModel.findOne({email});
        const existingName= await userModel.findOne({username});
+
        if(existingEmail || existingName ){
        return  res.status(201).send({
             result:"registration error",

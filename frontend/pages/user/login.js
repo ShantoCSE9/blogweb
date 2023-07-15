@@ -1,10 +1,10 @@
+import Navbar from '@/components/Navbar';
 import { useUserContext } from '@/pages/context';
 import { Alert, Button, CircularProgress, TextField, Typography } from '@mui/material';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import style from '../../styles/login.module.css';
-import Navbar from '@/components/Navbar';
 const Login = () => {
   const router = useRouter();
   const [state,setValue]=useState(false)

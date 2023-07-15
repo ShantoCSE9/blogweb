@@ -62,11 +62,10 @@ e.preventDefault();
       
     })
     if(data.message!=='successed'){
-      console.log(data)
+     
       setValue(true)
     }
     if(data.message==='successed'){
-      console.log(data)
         router.push({
           pathname: '/user/login',
           
@@ -77,7 +76,7 @@ e.preventDefault();
 
   
        
-   catch (error) {
+  catch (error) {
     console.log(error)
   }
  }
