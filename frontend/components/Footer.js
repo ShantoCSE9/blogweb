@@ -31,7 +31,7 @@ const Footer = () => {
                   <h1 className={style.h1} onClick={()=>router.push('/')}>Bangla<span style={{
                         opacity:'.8',
                         color:"red"
-                      }}>Blog</span></h1>
+                      }}>Media</span></h1>
               </div>
               <div className={style.aboutBlog}>Lorem ipsum dolor sit amet. Eos quia explicabo non        galisum atque qui atque perferendis sitconsequatur quaerat in 
               tempora laborum vel voluptatibus blanditiis.Hic aliquid deserunt vel

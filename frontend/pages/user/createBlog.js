@@ -88,7 +88,7 @@ const convertBase64=(file)=>{
        
        if(data2&&data3) {
         
-        alert('Thank you for creating a blog in our website.') 
+        alert('Thank you for creating an article in our website.') 
         set4(false)
         router.push({
           pathname: '/',     
@@ -125,7 +125,7 @@ parser.end();
   <Navbar />
    
    <div className={style.heading} >
-      <h1 >CREATE A BLOG</h1>
+      <h1 >CREATE AN ARTICLE</h1>
    </div>
     <form onSubmit={saveDb} >
        <div className={style.title}>

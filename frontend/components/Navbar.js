@@ -57,7 +57,7 @@ const query=router.query;
                     }>Bangla<span style={{
                         opacity:'.8',
                         color:"red"
-                      }}>Blog</span>
+                      }}>Media</span>
                       
                    </h1>                  
                   <div style={{}}>

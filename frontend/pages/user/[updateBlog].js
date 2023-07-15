@@ -96,7 +96,7 @@ const convertBase64=(file)=>{
        
       if(data){
         set5(false)
-        alert('Your blog is updated successfully')
+        alert('Your article is updated successfully')
         router.push({
           pathname: '/',     
         });
@@ -134,7 +134,7 @@ const parser = new htmlparser2.Parser({
   {state3  && <>
     
     <div className={style.heading} >
-      <h1 >UPDATE  YOUR  BLOG</h1>
+      <h1 >UPDATE  YOUR  ARTICLE</h1>
    </div>
     <form onSubmit={saveDb} >
        <div className={style.title}>
