@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import { Alert, Button, CircularProgress, TextField, Typography } from '@mui/material';
 import axios from 'axios';
+import Router from "next/router";
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import style from '../../styles/registration.module.css';
@@ -18,10 +19,12 @@ const Register = () => {
  const handleFileChange = async(e) => {
   
     const file=e.target.files[0];
+    if(file.size>300000){
+      alert("The image size should be below 300 kilobytes")
+      Router.reload();
+    }
     const base64=await convertBase64(file)
     setSelectedFile(base64);
-
-
 }
 
 const convertBase64=(file)=>{
