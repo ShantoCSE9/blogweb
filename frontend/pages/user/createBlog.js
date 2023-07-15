@@ -18,7 +18,7 @@ export default function CreateBlog() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [state,set]=useState("")
   const [state3,set3]=useState(false)
-  
+  const [state4,set4]=useState(false)
   const [state2,setValue]=useState({
     title:'',
     category:'',
@@ -62,6 +62,7 @@ const convertBase64=(file)=>{
 
   const saveDb=async(e)=>{
     e.preventDefault();
+    set4(true)
     let info;
     if (typeof window !== 'undefined') {
      info= localStorage.getItem('info')
@@ -86,7 +87,9 @@ const convertBase64=(file)=>{
       
        
        if(data2&&data3) {
+        
         alert('Thank you for creating a blog in our website.') 
+        set4(false)
         router.push({
           pathname: '/',     
         });
@@ -114,6 +117,9 @@ parser.end();
   
   return <>
   {!state3  && <div style={{display:'flex', justifyContent:'center',paddingTop:"150px",overflow:'hidden',position:'fixed',zIndex:"100",
+        backgroundColor: "rgba(228, 236, 250, 0.507)",width:'100%',height:"100%"}}> <CircularProgress  color='success'/> </div>}
+        
+  {state4  && <div style={{display:'flex', justifyContent:'center',paddingTop:"150px",overflow:'hidden',position:'fixed',zIndex:"100",
         backgroundColor: "rgba(228, 236, 250, 0.507)",width:'100%',height:"100%"}}> <CircularProgress  color='success'/> </div>}
        
   <Navbar />

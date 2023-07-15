@@ -9,6 +9,7 @@ const Register = () => {
  const [selectedFile, setSelectedFile] = useState(null);
  const [state2,set]=useState('')
  const [state,setValue]=useState(false)
+ const [state3,set3]=useState(false)
  const [inputs,setinfo]=useState({
     username:"",
     email:"",
@@ -52,6 +53,7 @@ setTimeout(() => {
  }
  const formdata=async (e)=>{
 e.preventDefault();
+set3(true)
   try {
 
       const {data} = await axios.post('https://blogweb-uxhj.onrender.com/register', {
@@ -62,10 +64,12 @@ e.preventDefault();
       
     })
     if(data.message!=='successed'){
-     
+      set3(false)
       setValue(true)
     }
     if(data.message==='successed'){
+       alert("registration is completed")
+       set3(false)
         router.push({
           pathname: '/user/login',
           
@@ -86,6 +90,9 @@ e.preventDefault();
    <div style={{}}>
     {!state2  && <div style={{display:'flex', justifyContent:'center',paddingTop:"150px",overflow:'hidden',position:'fixed',zIndex:"100",
         backgroundColor: "rgba(228, 236, 250, 0.507)",width:'100%',height:"100%"}}> <CircularProgress  color='success'/> </div>}
+    {state3  && <div style={{display:'flex', justifyContent:'center',paddingTop:"150px",overflow:'hidden',position:'fixed',zIndex:"100",
+        backgroundColor: "rgba(228, 236, 250, 0.507)",width:'100%',height:"100%"}}> <CircularProgress  color='success'/> </div>}
+       
     <Navbar/>
    
     <div  className={style.main}>

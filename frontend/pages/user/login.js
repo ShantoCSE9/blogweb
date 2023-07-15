@@ -9,6 +9,7 @@ const Login = () => {
   const router = useRouter();
   const [state,setValue]=useState(false)
   const [state2,set]=useState(false)
+  const [state3,set3]=useState(false)
   const [inputs,setvalue]=useState({
     email:"",
     password:""
@@ -24,6 +25,7 @@ const Login = () => {
  }
 const value=useUserContext();
  const formdata=async (e)=>{
+  set3(true)
       e.preventDefault();
               try {
                   const {data} = await axios.post('https://blogweb-uxhj.onrender.com/login', {
@@ -39,11 +41,15 @@ const value=useUserContext();
                   localStorage.setItem('name',data.user.username)
   
                 }
+                set3(false)
                  router.push('/')        
                 }
 
               else
-                setValue(true)
+                {
+                  set3(false)
+                  setValue(true)
+                }
                 
                } catch (error) {
                 console.log(error)  
@@ -56,7 +62,9 @@ const value=useUserContext();
     
     {!state2  && <div style={{display:'flex', justifyContent:'center',paddingTop:"150px",overflow:'hidden',position:'fixed',zIndex:"100",
         backgroundColor: "rgba(228, 236, 250, 0.507)",width:'100%',height:"100%"}}> <CircularProgress  color='success'/> </div>}
-      <Navbar/>
+  {state3  && <div style={{display:'flex', justifyContent:'center',paddingTop:"150px",overflow:'hidden',position:'fixed',zIndex:"100",
+        backgroundColor: "rgba(228, 236, 250, 0.507)",width:'100%',height:"100%"}}> <CircularProgress  color='success'/> </div>}
+            <Navbar/>
        <div className={style.main}>
           <div className={style.login}>
           <Typography variant='h3 ' component="h2" sx={{color:'#FF8000'}}>LOGIN</Typography>

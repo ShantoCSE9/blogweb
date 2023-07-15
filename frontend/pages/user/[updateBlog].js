@@ -28,6 +28,7 @@ export default function UpdateBlog() {
   const [state3,set3]=useState('')
   b+=state;
   const [state4,set4]=useState(false) 
+  const [state5,set5]=useState(false) 
   
   const handleFileChange = async(e) => { 
     const file=e.target.files[0];
@@ -77,6 +78,7 @@ const convertBase64=(file)=>{
  }
   const saveDb=async(e)=>{
     e.preventDefault();
+    set5(true)
     let info;
     if (typeof window !== 'undefined') {
      info= localStorage.getItem('info')
@@ -93,6 +95,7 @@ const convertBase64=(file)=>{
       
        
       if(data){
+        set5(false)
         alert('Your blog is updated successfully')
         router.push({
           pathname: '/',     
@@ -123,6 +126,9 @@ const parser = new htmlparser2.Parser({
   return <>
  {!state4 && <div style={{display:'flex', justifyContent:'center',paddingTop:"150px",overflow:'hidden',position:'fixed',zIndex:"100",
         backgroundColor: "rgba(228, 236, 250, 0.507)",width:'100%',height:"100%"}}> <CircularProgress  color='success'/> </div>}
+   {state5  && <div style={{display:'flex', justifyContent:'center',paddingTop:"150px",overflow:'hidden',position:'fixed',zIndex:"100",
+        backgroundColor: "rgba(228, 236, 250, 0.507)",width:'100%',height:"100%"}}> <CircularProgress  color='success'/> </div>}
+             
   <Navbar />
    
   {state3  && <>
