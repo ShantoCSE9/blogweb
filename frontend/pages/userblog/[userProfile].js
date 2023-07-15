@@ -23,7 +23,7 @@ const UserProfile = () => {
     const userBlog=localStorage.getItem('userBlog','false')
     if(userBlog==='false'||userBlog===null){
       set4(userBlog)
-      await axios. get(`http://localhost:5000/userPending-blog/${userProfile}`,{
+      await axios. get(`https://blogweb-uxhj.onrender.com/userPending-blog/${userProfile}`,{
         params:{
         page:activePage,
         size:limit
@@ -42,7 +42,7 @@ const UserProfile = () => {
   else{
     set4(userBlog)
 
-    await axios.get(`http://localhost:5000/user-blog/${userProfile}`,{
+    await axios.get(`https://blogweb-uxhj.onrender.com/user-blog/${userProfile}`,{
         params:{
         page:activePage,
         size:limit
