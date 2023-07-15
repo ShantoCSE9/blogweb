@@ -4,19 +4,7 @@ const emailValidator = require('deep-email-validator');
 exports.register=async(req, res)=>{
 try {
   const {username,email,password,profileImg}=req.body;
-  async function isEmailValid(email) {
-    return emailValidator.validate(email)
-   }
-
-   const {valid, reason, validators} = await isEmailValid(email);
-   if(!valid)
-   {
-     return res.status(201).send({
-       result:"invalid emial",
-       message:"please provide valid email"
-   })
-  }
-    
+  
        if(!username||!email||!password||!profileImg){
        return res.status(201).send({
             result:"registration error",
