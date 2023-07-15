@@ -126,7 +126,7 @@ const UserProfile = () => {
      next={fetchdata}
      hasMore={state.length<totalBlog}
      endMessage={
-      <p style={{textAlign:'center',fontSize:'20px',color:'gray',margin:'20px'}}>
+      <p style={{textAlign:'center',fontSize:'15px',color:'gray'}}>
 
         {state.length>=totalBlog&&"-- THE END --"}
       </p>

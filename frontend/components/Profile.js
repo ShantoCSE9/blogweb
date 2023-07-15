@@ -5,6 +5,7 @@ import style from '../styles/Profile.module.css';
 const Profile = (props) => {
   const router=useRouter();
   const value=useUserContext()
+
   value.current=props.value;
  const query=router.query
   const createBlogPage=()=>{
