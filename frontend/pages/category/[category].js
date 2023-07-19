@@ -73,7 +73,7 @@ const Category = () => {
       {!state2 && <div style={{display:'flex', justifyContent:'center',paddingTop:"150px",overflow:'hidden',position:'fixed',zIndex:"100",
         backgroundColor: "rgba(228, 236, 250, 0.507)",width:'100%',height:"100%"}}> <CircularProgress  color='success'/> </div>}
       <Navbar/>
-      <h3 style={{textAlign:'center',color:'red'}}>{catValue} </h3>
+      <h3 style={{textAlign:'center',color:'black',padding:'20px'}}>{catValue} </h3>
 
    <>
   
