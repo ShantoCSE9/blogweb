@@ -13,6 +13,7 @@ const Blog = () => {
     const id=router.query.blog
     useEffect(()=>{
     let l= localStorage.getItem('info')
+    localStorage.removeItem('catval') 
     set2(l);
     const getblog=async()=>{
         const {data}=  await axios.get(`https://blogweb-uxhj.onrender.com/single-blog/${id}`)

@@ -66,6 +66,8 @@ const UserProfile = () => {
     let l= localStorage.getItem('info')
     let m= localStorage.getItem('pic')
     let n= localStorage.getItem('name')
+   
+      localStorage.removeItem('catval')
     let userBlog= localStorage.getItem('userBlog')
   
   

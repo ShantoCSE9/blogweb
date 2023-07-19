@@ -31,14 +31,15 @@ export default function Home() {
        
       }
 
-      useEffect(()=>{    
+      useEffect(()=>{ 
+          localStorage.removeItem('catval')
         fetchdata();
       },[]) // eslint-disable-line react-hooks/exhaustive-deps
      
       
   return (
     
-    <div className=''>
+    <div className='hgt'>
       {!state2  && <div style={{display:'flex', justifyContent:'center',paddingTop:"150px",overflow:'hidden',position:'fixed',zIndex:"100",
         backgroundColor: "rgba(228, 236, 250, 0.507)",width:'100%',height:"100%"}}> <CircularProgress  color='success'/> </div>}
 

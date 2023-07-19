@@ -82,6 +82,7 @@ const convertBase64=(file)=>{
     let info;
     if (typeof window !== 'undefined') {
      info= localStorage.getItem('info')
+     localStorage.removeItem('catval')
     }
        try {
              

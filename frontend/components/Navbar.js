@@ -18,6 +18,7 @@ const query=router.query;
   let l= localStorage.getItem('info')
   let m= localStorage.getItem('pic')
   let n= localStorage.getItem('name')
+
   set2({
    userID:l,
    userImg:m,
@@ -27,11 +28,24 @@ const query=router.query;
 
 
  const category=(e)=>{
-   router.push(`/category/${e.target.attributes[1].value}`)
-   setTimeout(() => {
-    router.reload()
-   }, 2000);
- 
+  //  router.push(`/category/${e.target.attributes[1].value}`)
+  //  setTimeout(() => {
+  //   router.reload()
+  //  }, 2000);
+  if(typeof window !== 'undefined') {
+  localStorage.setItem('cat',1)
+  let r= localStorage.getItem('catval')
+  if(r!==e.target.attributes[1].value){
+    localStorage.setItem('catval',e.target.attributes[1].value)
+    router.push({
+      pathname: `/category/${e.target.attributes[1].value}`
+      
+    })
+   
+  }
+  
+  }
+  
  }
 
 

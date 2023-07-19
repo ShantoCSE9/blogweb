@@ -6,9 +6,9 @@ const UserContext = createContext();
 export default function AppStore({ children }) {
   
    const isLogin=useRef(false);
-   const page=useRef(false);
+ 
   return (
-    <UserContext.Provider value={isLogin} valuer={page} >
+    <UserContext.Provider value={isLogin} >
       {children}
     </UserContext.Provider>
   );

@@ -39,6 +39,7 @@ const value=useUserContext();
                   localStorage.setItem('info',data.user._id)
                   localStorage.setItem('pic',data.user.profileImg)
                   localStorage.setItem('name',data.user.username)
+                  localStorage.removeItem('catval')
   
                 }
                 set3(false)

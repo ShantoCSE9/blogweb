@@ -54,6 +54,10 @@ setTimeout(() => {
   })
  
  }
+ if (typeof window !== 'undefined') {
+  localStorage.removeItem('catval')
+
+}
  const formdata=async (e)=>{
 e.preventDefault();
 set3(true)
