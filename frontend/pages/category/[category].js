@@ -9,6 +9,19 @@ const Category = () => {
     const router=useRouter()
     const category=router.query.category;
     const [activePage,setPage]=useState(1);
+    let catValue;
+        if(category==='history')
+        catValue='ইতিহাস'
+        if(category==='book_and_cinema')
+        catValue='বই ও সিনেমা'
+        if(category==='sports')
+        catValue='খেলা'
+        if(category==='science')
+        catValue='বিজ্ঞান'
+        if(category==='bd')
+        catValue='বাংলাদেশ'
+        if(category==='world')
+        catValue='বিশ্ব'
    
     let cat;
     const [state,set]=useState([]);
@@ -60,6 +73,7 @@ const Category = () => {
       {!state2 && <div style={{display:'flex', justifyContent:'center',paddingTop:"150px",overflow:'hidden',position:'fixed',zIndex:"100",
         backgroundColor: "rgba(228, 236, 250, 0.507)",width:'100%',height:"100%"}}> <CircularProgress  color='success'/> </div>}
       <Navbar/>
+      <h3 style={{textAlign:'center',color:'red'}}>{catValue} </h3>
 
    <>
   
