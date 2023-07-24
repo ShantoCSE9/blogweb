@@ -61,7 +61,7 @@ const query=router.query;
                      textAlign:"center",
                      color:'#1b9e07',
                      cursor:'pointer',
-                     fontSize:'25px',
+                     fontSize:'20px',
               
                       }} onClick={()=>{
                         router.push('/')                  
