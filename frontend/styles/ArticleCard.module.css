@@ -1,13 +1,11 @@
 .gridItem {
      background-color: rgb(255, 255, 255);
-     box-shadow: 0px 0px 3px 2px rgb(212, 212, 212);
      cursor: pointer;
      border-radius: 25px; 
      color: rgb(27, 27, 27);
     
   }
-  .gridItem:hover{
-  }
+  
 .info{
     display:flex;
     font-size: 13px;
@@ -20,5 +18,6 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+   
 }
 

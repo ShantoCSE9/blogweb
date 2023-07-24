@@ -28,7 +28,7 @@ const Blog = () => {
   
     return (
    
-    <div style={{backgroundColor:'rgb(250, 255, 255)',minHeight:'100vh'}}>
+    <div style={{backgroundColor:'#002335',minHeight:'100vh'}}>
   {!state3  && <div style={{display:'flex', justifyContent:'center',paddingTop:"150px",overflow:'hidden',position:'fixed',zIndex:"100",
         backgroundColor: "rgba(228, 236, 250, 0.507)",width:'100%',height:"100%"}}> <CircularProgress  color='success'/> </div>}
 

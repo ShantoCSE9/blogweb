@@ -27,6 +27,11 @@
   background: rgb(255, 255, 255);
   margin-bottom: 30px;
 }
+.hgt{
+  min-height: 100vh;
+  background-color: #002335;
+
+}
 @media only screen and (min-width: 501px){
   .my-masonry-grid {
     padding:40px;

@@ -1,9 +1,12 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import style from '../styles/ArticleCard.module.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const AriticleCard = ({value}) => {
 let f=value.date.slice(0,10)
 const router=useRouter();
+AOS.init();
 const eve=(e)=>{
   if(value.blogId)
   router.push(`/singleblog/${value.blogId}`) 
@@ -12,7 +15,7 @@ const eve=(e)=>{
 }
 return (
   
-            <div className={style.gridItem} onClick={eve}>
+            <div className={style.gridItem}  data-aos="fade-up" data-aos-duration="500" onClick={eve}>
                 <div> 
        <Image src={value.coverImg}
                     style={{borderTopLeftRadius:'25px',borderTopRightRadius:'25px',objectFit:'cover',width:'100%',height:'200px'}}  

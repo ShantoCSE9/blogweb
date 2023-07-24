@@ -134,8 +134,10 @@ const parser = new htmlparser2.Parser({
    
   {state3  && <>
     
-    <div className={style.heading} >
+   <div className="hgt">
+   <div className={style.heading} >
       <h1 >UPDATE  YOUR  ARTICLE</h1>
+      <hr style={{width:'280px',margin:'10px auto'}}></hr>
    </div>
     <form onSubmit={saveDb} >
        <div className={style.title}>
@@ -167,6 +169,7 @@ const parser = new htmlparser2.Parser({
           </div>
     </form>
    
+   </div>
 
   </>}
   

@@ -124,11 +124,13 @@ parser.end();
         backgroundColor: "rgba(228, 236, 250, 0.507)",width:'100%',height:"100%"}}> <CircularProgress  color='success'/> </div>}
        
   <Navbar />
-   
+  <div style={{backgroundColor:"#002335"}}>
+     
    <div className={style.heading} >
       <h1 >CREATE AN ARTICLE</h1>
    </div>
-    <form onSubmit={saveDb} >
+   <hr style={{width:'280px',margin:'10px auto'}}></hr>
+    <form onSubmit={saveDb} style={{paddingTop:'50px'}}>
        <div className={style.title}>
         <h1  sx={{paddingBottom:'10px'}}>Title:</h1> 
         <input className={style.input} maxLength={100} name='title' required onChange={handleChange} type="text" /> 
@@ -156,6 +158,7 @@ parser.end();
           <Button className={style.submit} type="submit" variant="contained">SUBMIT</Button>
           </div>
     </form>
+  </div>
    
 
   </>

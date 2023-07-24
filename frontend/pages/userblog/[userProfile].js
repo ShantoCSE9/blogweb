@@ -85,7 +85,7 @@ const UserProfile = () => {
  },[userProfile]) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <div>
+    <div className='hgt'>
       {!state3  && <div style={{display:'flex', justifyContent:'center',paddingTop:"150px",overflow:'hidden',position:'fixed',zIndex:"100",
         backgroundColor: "rgba(228, 236, 250, 0.507)",width:'100%',height:"100%"}}> <CircularProgress  color='success'/> </div>}
         <Navbar/>
@@ -93,8 +93,8 @@ const UserProfile = () => {
         <div>
            <div style={{display:'flex',flexDirection:'column', justifyContent:'center', alignItems:'center',marginTop:'30px'}}>  
         {state2.userImg &&  <Image  src={state2.userImg} alt='' width={80} height={80} style={{borderRadius:'50%',objectFit:'cover',border:'4px solid #d3d3d3'}}/>}
-           <h5 style={{fontSize:'16px',color:'black',margin:"10px 0px",fontWeight:'normal'}}>Author</h5>
-           <h2 style={{margin:'0px'}}>{state2 && `${state2.userName}`}</h2>
+           <h5 style={{fontSize:'16px',color:'gray',margin:"10px 0px",fontWeight:'normal'}}>Author</h5>
+           <h2 style={{margin:'0px',color:'gray'}}>{state2 && `${state2.userName}`}</h2>
          </div> 
         </div>
         <div style={{display:'flex',justifyContent:'center', margin:'20px 40px',}}>
@@ -128,7 +128,7 @@ const UserProfile = () => {
      next={fetchdata}
      hasMore={state.length<totalBlog}
      endMessage={
-      <p style={{textAlign:'center',fontSize:'20px',color:'gray',margin:'20px'}}>
+      <p style={{textAlign:'center',fontSize:'17px',color:'gray',margin:'10px'}}>
 
         {state.length>=totalBlog&&"-- THE END --"}
       </p>

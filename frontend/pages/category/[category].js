@@ -27,7 +27,7 @@ const Category = () => {
     const [state,set]=useState([]);
     const [state3,set3]=useState([]);
     const [totalBlog,setValue]=useState();
-    const limit=5;
+    const limit=7;
     
     const [state2,set2]=useState(false)
 
@@ -53,7 +53,7 @@ const Category = () => {
            setValue(data.total)          
            setTimeout(() => {
             set2(true)
-           }, 3000);
+           }, 1000);
         }).catch((error)=>{
           console.log(error)
         })
@@ -69,11 +69,12 @@ const Category = () => {
 
 
   return (
-    <div>
-      {!state2 && <div style={{display:'flex', justifyContent:'center',paddingTop:"150px",overflow:'hidden',position:'fixed',zIndex:"100",
+    <div className='hgt'>
+      {!state2 && <div style={{display:'flex', justifyContent:'center',paddingTop:"180px",overflow:'hidden',position:'fixed',zIndex:"100",
         backgroundColor: "rgba(228, 236, 250, 0.507)",width:'100%',height:"100%"}}> <CircularProgress  color='success'/> </div>}
       <Navbar/>
-      <h3 style={{textAlign:'center',color:'black',padding:'20px'}}>{catValue} </h3>
+      <h3 style={{textAlign:'center',color:'#e8e8e8',paddingTop:'20px'}}>{catValue} </h3>
+      <hr style={{width:'150px',margin:'5px auto'}}></hr>
 
    <>
   
@@ -87,7 +88,7 @@ const Category = () => {
 
       </InfiniteScroll>
     </>
-     { state.length===totalBlog && state.length!=0 && <p style={{textAlign:'center',fontSize:'20px', color:'gray',padding:'20px'}}>
+     { state.length===totalBlog && state.length!=0 && <p style={{textAlign:'center',fontSize:'17px', color:'gray',padding:'20px'}}>
           "-- You have seen it all --"
         </p>}
     </div>

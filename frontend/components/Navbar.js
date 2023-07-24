@@ -59,7 +59,7 @@ const query=router.query;
                     </div>
                    <h1 style={{
                      textAlign:"center",
-                     color:'green',
+                     color:'#1b9e07',
                      cursor:'pointer',
                      fontSize:'25px',
               

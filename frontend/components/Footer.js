@@ -5,22 +5,22 @@ const Footer = () => {
   const router=useRouter();
  
   const category=(e)=>{
-   let catValue;
-   console.log(e);
-   if(e.target.attributes[0].value==='history')
-    catValue='history'
-    if(e.target.attributes[0].value==='book_and_cinema')
-    catValue='book_and_cinema'
-    if(e.target.attributes[0].value==='sports')
-    catValue='sports'
-    if(e.target.attributes[0].value==='science')
-    catValue='science'
-    if(e.target.attributes[0].value==='bd')
-    catValue='bd'
-    if(e.target.attributes[0].value==='world')
-    catValue='world'
-    
-  return  router.push(`/category/${catValue}`)
+   
+
+    if(typeof window !== 'undefined') {
+      localStorage.setItem('cat',1)
+      let r= localStorage.getItem('catval')
+      if(r!==e.target.attributes[0].value){
+        localStorage.setItem('catval',e.target.attributes[0].value)
+        router.push({
+          pathname: `/category/${e.target.attributes[0].value}`
+          
+        })
+       
+      }
+      
+      }
+
    
   }
   return (
