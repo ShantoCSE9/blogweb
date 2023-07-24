@@ -149,11 +149,15 @@ exports.createBlog=async(req,res)=>{
     try {
         const {id}=req.params;
         const singleBlog= await userBlogModel.findById(id).populate('user')
-        if(singleBlog)
-        return res.status(201).send({
-            message:'successed',
-            singleBlog
-        })
+      
+        if(singleBlog){
+           
+            return res.status(201).send({
+                message:'successed',
+                singleBlog
+            })
+        }
+      
         else res.status(404).send({
             message:'failed to get blog',
             singleBlog

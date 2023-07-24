@@ -1,7 +1,10 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import style from '../styles/DraftCard.module.css';
 const DraftCard = ({value}) => {
+  AOS.init();
 const router=useRouter();
 const eve=(e)=>{
      router.push({
@@ -12,7 +15,7 @@ const eve=(e)=>{
  const category=router.query.category;
  return (
   
-            <div className={style.draftItem} onClick={eve}>
+            <div className={style.draftItem} data-aos="fade-up" onClick={eve}>
                 <div > 
                     < Image  src={value.coverImg} 
                     width={0} height={0} sizes='50vw' alt=''  style={{borderRadius:'5%',objectFit:'cover',opacity:'.7',width:'100%',minHeight:'250px'}}  />

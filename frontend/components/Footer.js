@@ -29,13 +29,13 @@ const Footer = () => {
            <div className={style.firstPart}>
               <div>
                   <h1 className={style.h1} onClick={()=>router.push('/')}>Bangla<span style={{
-                        opacity:'.8',
+                    
                         color:"red"
                       }}>Media</span></h1>
               </div>
-              <div className={style.aboutBlog}>Lorem ipsum dolor sit amet. Eos quia explicabo non        galisum atque qui atque perferendis sitconsequatur quaerat in 
+              <div className={style.aboutBlog}>Lorem ipsum dolor sit amet. Eos quia explicabo non galisum atque qui atque perferendis sitconsequatur quaerat in 
               tempora laborum vel voluptatibus blanditiis.Hic aliquid deserunt vel
-              dicta autem ut quam suscipit eum aperiam nostrum qui quia accusamus eum ipsum expedita. </div>
+            . </div>
            </div>   
 
            <div className={style.secondPart}>
@@ -51,7 +51,7 @@ const Footer = () => {
 
            <div className={style.thirdPart}>
                 <p className={style.contact}>Email us for general inquiries and copyright information</p>
-                <p>Contact:01307362599</p>
+                <p>Contact: 01307362599</p>
           </div>
     </div>
   )

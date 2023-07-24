@@ -25,7 +25,7 @@ const Blog = () => {
     }
     if(id) getblog()
    },[id])
-  
+ console.log(state)
     return (
    
     <div style={{backgroundColor:'#002335',minHeight:'100vh'}}>
@@ -39,8 +39,17 @@ const Blog = () => {
         <div className={style.blogFirstPart}>
          <div className={style.userInfo}>
             <h1 className={style.title} >{state.title} </h1>
-            <div style={{marginRight:'10px',marginBottom:'10px',fontSize:'20px'}} >Author: {state.user.username}</div>
-            <div style={{display:'flex'}}> 
+            <div style={{fontSize:'20px',border:'1px solid gray',borderRadius:"40px", margin:"10px 0", height:"37px",display:'inline-block'}}
+            
+            onClick={()=>{
+              router.push(`/userblog/${state.user._id}`)
+            }}
+            >
+              
+            <Image src={state.user.profileImg} width={35} height={35} style={{borderRadius:"50%",marginTop:'0px', objectFit:"cover",objectPosition:'center'}} alt=''/> <span style={{position:'relative',top:'-10px',padding:'0px 10px'}}>{state.user.username}</span>
+              
+              </div>
+            <div style={{display:'flex',margin:'5px 0px'}}> 
             <div style={{marginRight:'5px',marginBottom:'10px',fontSize:'13px'}}>{state.category}</div>
             <span style={{marginRight:'5px',marginBottom:'10px',fontSize:'15px'}}> || </span>
             <div>{state.date.slice(0,10)}</div>

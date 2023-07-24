@@ -3,9 +3,10 @@
      cursor: pointer;
      border-radius: 25px; 
      color: rgb(27, 27, 27);
+   
     
   }
-  
+ 
 .info{
     display:flex;
     font-size: 13px;

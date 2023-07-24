@@ -1,9 +1,11 @@
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Masonry from 'react-masonry-css';
 import DraftCard from './DraftCard';
 const draft = ({value}) => {
+ 
   return (
-    <>
+    <div >
          { value?  <Masonry
         breakpointCols={{
           default:5,
@@ -22,7 +24,7 @@ const draft = ({value}) => {
       }) } </Masonry>:" "
     }
     
-    </>
+    </div>
   
   )
 }

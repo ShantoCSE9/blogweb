@@ -14,7 +14,7 @@
     justify-content: center;
     align-items: center;
     width:500px;
-    padding: 40px;
+    padding: 20px;
     background-color: #FFFFFF;
     
    
@@ -27,4 +27,10 @@
     width:100%;
     margin:10px auto;
    
+  }
+  @media only screen and (max-width: 530px){
+  
+    .main{
+      margin: 40px !important; ;
+    }
   }

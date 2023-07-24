@@ -1,5 +1,5 @@
 .footer{
-  background-color: rgb(29, 28, 28);
+  background-color: rgb(10, 10, 10);
   padding:20px;
   min-height: 350px;
   font-size: 18px;
@@ -11,8 +11,8 @@
 }
 .h1{
   cursor: pointer;
-  color: green;
-  font-size: 20px;
+  color: rgb(7, 153, 7);
+  font-size: 24px;
   margin: 10px 0;
   text-align: center;
 }
@@ -29,7 +29,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  color: grey;
+  color:rgba(255, 255, 255, 0.521);
   font-size: 15px;
 }
 .li{
@@ -44,7 +44,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: grey;
+  color:rgba(255, 255, 255, 0.521);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
 }
 .contact{
   text-align: center;
@@ -52,15 +54,16 @@
   font-size: 18px;
 }
 .aboutBlog{
-  color:gray;
-  font-size: 18px;
-  line-height: 1.7;
-  text-align: center;
+  color:rgba(255, 255, 255, 0.521);
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: justify;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .firstPart{
   font-size: 20px;
 }
-@media only screen and (min-width: 900px){
+@media only screen and (min-width: 780px){
   .footer{
     flex-direction: row;
     justify-content: space-between;
@@ -68,16 +71,14 @@
   }
   .firstPart{
     width:800px;
-    font-size: 28px;
   }
-  .h1,.aboutBlog{
+  
+  .h1{
     text-align: justify;
-    line-height: 1.2;
-    font-size: 20px;
+
   }
   .contact{
     text-align: end;
-    font-size: 18px;
   }
   .thirdPart{
     justify-content: flex-end;

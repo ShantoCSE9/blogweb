@@ -5,7 +5,10 @@ import axios from 'axios';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
+// ..
+
 const Category = () => {
+
     const router=useRouter()
     const category=router.query.category;
     const [activePage,setPage]=useState(1);
@@ -61,6 +64,7 @@ const Category = () => {
         
   
   useEffect(()=>{
+  
     set2(false)
     fetchdata()
 
@@ -69,25 +73,27 @@ const Category = () => {
 
 
   return (
-    <div className='hgt'>
+    <div className='hgt '  >
       {!state2 && <div style={{display:'flex', justifyContent:'center',paddingTop:"180px",overflow:'hidden',position:'fixed',zIndex:"100",
         backgroundColor: "rgba(228, 236, 250, 0.507)",width:'100%',height:"100%"}}> <CircularProgress  color='success'/> </div>}
       <Navbar/>
-      <h3 style={{textAlign:'center',color:'#e8e8e8',paddingTop:'20px'}}>{catValue} </h3>
-      <hr style={{width:'150px',margin:'5px auto'}}></hr>
+     
 
-   <>
-  
-      <InfiniteScroll
+   <div>
+   <h3 style={{textAlign:'center',color:'#e8e8e8',paddingTop:'20px'}}>{catValue} </h3>
+      <hr style={{width:'150px',margin:'5px auto'}}></hr>
+      <InfiniteScroll 
        dataLength={state.length}
        next={fetchdata}
        hasMore={state.length<totalBlog}
+       className='g'
        loader={state2&& <div style={{display:'flex', justifyContent:'center',margin:'20px',overflow:'hidden'}}><CircularProgress color='success'/> </div>}
       >
-      <Grid value={state}/> 
+      <Grid value={state} 
+  /> 
 
       </InfiniteScroll>
-    </>
+    </div>
      { state.length===totalBlog && state.length!=0 && <p style={{textAlign:'center',fontSize:'17px', color:'gray',padding:'20px'}}>
           "-- You have seen it all --"
         </p>}

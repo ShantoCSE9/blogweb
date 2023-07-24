@@ -5,7 +5,7 @@ const Grid = ({value}) => {
   return (
     <>
  
-       { value?  <div className=''>
+       { value?  <div >
         <Masonry
         breakpointCols={{
           default:5,

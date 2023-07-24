@@ -6,7 +6,12 @@
  
  
 }
+.g::-webkit-scrollbar{
+  height:0 !important; 
+  width: 0 !important;
+  background-color: blue;
 
+  }
 .my-masonry-grid {
   display: -webkit-box; /* Not needed if autoprefixing */
   display: -ms-flexbox; /* Not needed if autoprefixing */
@@ -14,7 +19,7 @@
   margin-left: -30px; 
   /* gutter size offset */
   width: auto;
-  padding:10px;
+  padding:20px;
 
 }
 .my-masonry-grid_column {
@@ -28,9 +33,11 @@
   margin-bottom: 30px;
 }
 .hgt{
-  min-height: 100vh;
   background-color: #002335;
-
+}
+.height{
+  background-color: #002335;
+  min-height: 100vh;
 }
 @media only screen and (min-width: 501px){
   .my-masonry-grid {
@@ -73,11 +80,8 @@
      }
 }
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 780px){
 
-  .hgt{
-    min-height: 100vh;
-
-  }
+  
 }
 
